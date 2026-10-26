@@ -1,0 +1,6 @@
+export const Message = {
+  EXTRACT: 'EXTRACT',
+  PAGE_STATUS: 'PAGE_STATUS',
+  PROGRESS: 'PROGRESS',
+  DOWNLOAD_CSV: 'DOWNLOAD_CSV',
+};

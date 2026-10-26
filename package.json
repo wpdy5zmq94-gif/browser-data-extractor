@@ -1,0 +1,20 @@
+{
+  "name": "browser-data-extractor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Generic Manifest V3 browser data extractor. First adapter: AliExpress wishlist to CSV.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpdy5zmq94-gif/browser-data-extractor.git"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.12"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

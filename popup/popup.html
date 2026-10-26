@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Browser Data Extractor</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Browser Data Extractor</h1>
+      <p>Reads a page you already have open. Adapters decide what to collect. Nothing here signs you in.</p>
+    </header>
+
+    <label class="toggle">
+      <input id="enabled" type="checkbox" />
+      <span class="track" aria-hidden="true"></span>
+      <span>
+        <strong id="enabled-label">Disabled</strong>
+        <small id="enabled-help">Content scripts stay idle and do not read the page.</small>
+      </span>
+    </label>
+
+    <section>
+      <h2>This tab</h2>
+      <p id="adapter-name">Checking the tab…</p>
+      <p id="adapter-detail" class="detail"></p>
+      <p id="columns" class="detail"></p>
+    </section>
+
+    <section>
+      <h2>Delay between requests</h2>
+      <div class="delay">
+        <input id="delay-min" type="number" min="0" max="60000" step="50" inputmode="numeric" aria-label="Minimum delay in milliseconds" />
+        <span>to</span>
+        <input id="delay-max" type="number" min="0" max="60000" step="50" inputmode="numeric" aria-label="Maximum delay in milliseconds" />
+        <span>ms</span>
+      </div>
+      <p class="detail">A new random wait in this range runs before each scroll or page change. Raise it if a site rate-limits you. Defaults are 800–2500.</p>
+    </section>
+
+    <button id="export" type="button" disabled>Export CSV</button>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
